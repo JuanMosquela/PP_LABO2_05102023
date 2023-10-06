@@ -1,4 +1,5 @@
 using Entidades;
+using System.Configuration;
 
 namespace Integrador
 {
@@ -6,8 +7,8 @@ namespace Integrador
     {
 
         private Calculadora calculadora;
-    
-        
+
+
 
 
         public FrmCalculadora()
@@ -21,19 +22,20 @@ namespace Integrador
 
         }
 
+        
+
 
         private void buttonOperar_Click(object sender, EventArgs e)
         {
             char operador;
-            calculadora.PrimerOperando =
-            this.GetOperador(this.txtPrimerOperando.Text);
+            calculadora.PrimerOperando = this.GetOperador(this.txtPrimerOperando.Text);
             calculadora.SegundoOperando =
             this.GetOperador(this.txtSegundoOperando.Text);
             operador = (char)this.cmbOperacion.SelectedItem;
             this.calculadora.Calcular(operador);
             this.calculadora.ActualizaHistorialDeOperaciones(operador)
             ;
-            this.lblResultado.Text = $"Resultado:{ this.calculadora.Resultado.Valor}";
+            this.lblResultado.Text = $"Resultado:{this.calculadora.Resultado.Valor}";
             this.MostrarHistorial();
 
 
