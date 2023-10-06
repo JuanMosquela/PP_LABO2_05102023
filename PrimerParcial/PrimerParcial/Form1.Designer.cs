@@ -42,6 +42,8 @@
             rdbDecimalChecked = new RadioButton();
             radioBinarioChecked = new RadioButton();
             lblResult = new Label();
+            listBox = new ListBox();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -153,7 +155,7 @@
             groupBox1.Controls.Add(rdbDecimalChecked);
             groupBox1.Controls.Add(radioBinarioChecked);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(266, 170);
+            groupBox1.Location = new Point(318, 174);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(202, 80);
             groupBox1.TabIndex = 14;
@@ -195,11 +197,33 @@
             lblResult.Size = new Size(0, 38);
             lblResult.TabIndex = 15;
             // 
+            // listBox
+            // 
+            listBox.BorderStyle = BorderStyle.None;
+            listBox.FormattingEnabled = true;
+            listBox.ItemHeight = 15;
+            listBox.Location = new Point(817, 87);
+            listBox.Name = "listBox";
+            listBox.Size = new Size(241, 270);
+            listBox.TabIndex = 16;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(817, 46);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 25);
+            label1.TabIndex = 17;
+            label1.Text = "Historial:";
+            // 
             // FrmCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1084, 450);
+            Controls.Add(label1);
+            Controls.Add(listBox);
             Controls.Add(lblResult);
             Controls.Add(groupBox1);
             Controls.Add(labelOperando2);
@@ -212,7 +236,7 @@
             Controls.Add(buttonCerrar);
             Controls.Add(buttonLimpiar);
             Controls.Add(buttonOperar);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmCalculadora";
@@ -242,6 +266,7 @@
         private RadioButton rdbDecimalChecked;
         private RadioButton radioBinarioChecked;
         private Label lblResult;
-
+        private ListBox listBox;
+        private Label label1;
     }
 }

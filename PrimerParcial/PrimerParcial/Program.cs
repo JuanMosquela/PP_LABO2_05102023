@@ -1,5 +1,7 @@
 
 
+using Integrador;
+
 namespace PrimerParcial
 {
     internal static class Program
